@@ -1,0 +1,143 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.wrapper {
+  width: 1180px;
+  margin: auto;
+}
+
+.top {
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top_left {
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  color: #2577e3;
+}
+
+.top_left .iconfont {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.top_left .logoText {
+  margin-left: 10px;
+  font-size: 28px;
+  line-height: 40px;
+  font-family: '幼圆';
+  font-weight: bold;
+}
+
+.top_right {
+  display: inline-flex;
+  align-content: center;
+  margin-right: 20px;
+  float: right;
+}
+
+.top_address {
+  padding: 0;
+  margin: 0 12px;
+  width: 180px;
+}
+
+.top a {
+  display: inline-flex;
+  padding: 10px 0;
+
+  box-sizing: border-box;
+  align-content: center;
+  margin: 0 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.top_right a:hover span {
+  color: #0086f6;
+}
+
+.top_right .spanText {
+  line-height: 22px;
+  font-size: 14px;
+}
+
+.top_right .spanIcon {
+  font-size: 22px;
+  color: #5678a8;
+  margin: 0px 5px;
+}
+
+.top_kefu_list {
+  text-align: left;
+  padding: 24px 20px;
+  background: white;
+  width: 200px;
+  font-size: 12px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, .4);
+  line-height: 20px;
+  position: absolute;
+  top: 60px;
+  left: -100px;
+  height: 0px;
+  overflow: hidden;
+  opacity: 0;
+  z-index: -999;
+  transition: height .3s;
+}
+
+.top_kefu:hover .top_kefu_list {
+  opacity: 1;
+  z-index: 999;
+  height: 124px;
+}
+
+.top_app, .top_kefu {
+  position: relative;
+}
+
+.top_app_list {
+  width: 305px;
+  height: 0;
+  overflow: hidden;
+  transition: height .3s;
+  padding: 22px 23px 20px 23px;
+  position: absolute;
+  background: white;
+  top: 60px;
+  left: -160px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.4);
+  z-index: -999;
+  opacity: 0;
+}
+
+.top_app:hover .top_app_list {
+  height: 150px;
+  opacity: 1;
+  z-index: 999;
+}
+
+.top_app_list_img {
+  width: 305px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/*================选择地址================*/
+.el-dropdown-link {
+  cursor: pointer;
+}
+
+.el-dropdown-link:hover {
+  color: #0086f6;
+}
+
