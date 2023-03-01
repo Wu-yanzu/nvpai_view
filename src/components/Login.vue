@@ -135,7 +135,7 @@
 <style scoped>
   .login {
     /*background-color: #2b4b6b;*/
-    background-image: url(http://localhost:8080/upload/bgc.png);
+    background-image: url("../assets/login.jpg");
     height: 100%;
     width: 100%;
     position: absolute;
@@ -143,15 +143,15 @@
   }
 
   .login_box {
-    width: 450px;
+    background-color: rgba(255,255,255,0.4);
+    width: 380px;
     height: 380px;
-    background-color: #fff;
-    border-radius: 3px;
+    border-radius: 5%;
     position: absolute;
-    left: 50%;
+    padding: 60px;
+    right: 0%;
     top: 50%;
     transform: translate(-50%, -50%);
-
   }
 
   .top_img {
@@ -180,9 +180,8 @@
 
   .login_form {
     position: absolute;
-    bottom: -15px;
-    width: 100%;
-    padding: 10px;
+    bottom: -10px;
+    width: 70%;
     box-sizing: border-box;
   }
 
