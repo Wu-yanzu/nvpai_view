@@ -4,7 +4,7 @@
         <div>
              <el-row :gutter="10">
               <el-col :span="3">
-                  <el-input v-model="name" placeholder="请输入美食名称">
+                  <el-input v-model="username" placeholder="请输入用户名称">
                        <el-button slot="append" icon="el-icon-search" @click="fenye(1)" type="primary"></el-button>
                   </el-input>
               </el-col>
@@ -14,42 +14,42 @@
              </el-row>
         </div>
       </el-card>
-        <el-table
-          :data="foodPage.list"
-          style="width: 100%">
-          <el-table-column
-            prop="id"
-            label="序号"
-            width="180">
-          </el-table-column>
-          <el-table-column
-            prop="name"
-            label="美食名称"
-            width="180">
-          </el-table-column>
-          <el-table-column
-            prop="description"
-            label="描述名称">
-          </el-table-column>
-          <el-table-column
-            label="美食图片">
-            <template slot-scope="scope">
-                 <img v-for="item in scope.row.photos" :src="'http://localhost:8080/'+item.path"  width="60px"/>
-            </template>
-          </el-table-column>
+<!--        <el-table-->
+<!--          :data="foodPage.list"-->
+<!--          style="width: 100%">-->
+<!--          <el-table-column-->
+<!--            prop="id"-->
+<!--            label="序号"-->
+<!--            width="180">-->
+<!--          </el-table-column>-->
+<!--          <el-table-column-->
+<!--            prop="username"-->
+<!--            label="美食名称"-->
+<!--            width="180">-->
+<!--          </el-table-column>-->
+<!--          <el-table-column-->
+<!--            prop="description"-->
+<!--            label="描述名称">-->
+<!--          </el-table-column>-->
+<!--          <el-table-column-->
+<!--            label="美食图片">-->
+<!--            <template slot-scope="scope">-->
+<!--                 <img v-for="item in scope.row.photos" :src="'http://localhost:8080/'+item.path"  width="60px"/>-->
+<!--            </template>-->
+<!--          </el-table-column>-->
 
-          <el-table-column
-            label="操作">
-            <template slot-scope="scope">
-              <el-tooltip content="修改美食">
-                <el-button size="mini" type="primary" icon="el-icon-edit" @click="update(scope.row)" circle plain></el-button>
-              </el-tooltip>
-              <el-tooltip content="删除美食">
-                <el-button size="mini" type="primary" icon="el-icon-delete" @click="del(scope.row.id)" circle plain></el-button>
-              </el-tooltip>
-            </template>
-          </el-table-column>
-        </el-table>
+<!--          <el-table-column-->
+<!--            label="操作">-->
+<!--            <template slot-scope="scope">-->
+<!--              <el-tooltip content="修改美食">-->
+<!--                <el-button size="mini" type="primary" icon="el-icon-edit" @click="update(scope.row)" circle plain></el-button>-->
+<!--              </el-tooltip>-->
+<!--              <el-tooltip content="删除美食">-->
+<!--                <el-button size="mini" type="primary" icon="el-icon-delete" @click="del(scope.row.id)" circle plain></el-button>-->
+<!--              </el-tooltip>-->
+<!--            </template>-->
+<!--          </el-table-column>-->
+<!--        </el-table>-->
       <el-pagination
         @size-change="handleSizeChange"
         @current-change="fenye"
@@ -63,7 +63,7 @@
       <el-dialog title="添加美食" :visible.sync="adddialogFormVisible" v-if="adddialogFormVisible">
       <el-form ref="form" :model="form" label-width="80px">
       <el-form-item label="美食名称">
-      <el-input v-model="form.name"></el-input>
+      <el-input v-model="form.username"></el-input>
       </el-form-item>
       <el-form-item label="描述信息">
       <el-input v-model="form.description"></el-input>
@@ -141,7 +141,7 @@
           return{
              foodPage:{},
              pageSize:2,
-             name:"",
+             username:"",
             form:{},
             adddialogFormVisible:false,
             fileList:[],

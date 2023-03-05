@@ -4,9 +4,9 @@
         <div>
             <el-row :gutter="10">
              <el-col :span="3">
-               <el-input v-model="name" placeholder="请输入景区名称">
-                 <el-button type="primary" slot="append"  icon="el-icon-search" @click="fenye(1)" plain></el-button>
-               </el-input>
+<!--               <el-input v-model="name" placeholder="请输入景区名称">-->
+<!--                 <el-button type="primary" slot="append"  icon="el-icon-search" @click="fenye(1)" plain></el-button>-->
+<!--               </el-input>-->
              </el-col>
 
               <el-col :span="1">
@@ -25,33 +25,22 @@
       </el-table-column>
       <el-table-column
         prop="name"
-        label="景区名称"
+        label="视频标题"
         width="180">
       </el-table-column>
       <el-table-column
         prop="address"
-        label="景区地址">
+        label="视频链接">
       </el-table-column>
 
       <el-table-column
         prop="level"
-        label="景区级别">
+        label="视频描述">
       </el-table-column>
 
-      <el-table-column
-        label="景区图片">
-        <template slot-scope="scope">
-          <img :src="'http://localhost:8080/'+scope.row.photo"  width="60px"/>
-        </template>
-      </el-table-column>
 
       <el-table-column
-        prop="description"
-        label="景点详情">
-      </el-table-column>
-
-      <el-table-column
-        label="景区视频">
+        label="视频">
         <template slot-scope="scope">
 
           <!--//player.bilibili.com/player.html?aid=601283631&bvid=BV1KB4y1h7Up&cid=784496576&page=1-->
@@ -193,7 +182,7 @@
 
   </div>
 
-    
+
 </template>
 
 <script>

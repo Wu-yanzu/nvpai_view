@@ -17,12 +17,14 @@ import first from '../components/first'
 import ScenicDetails from '../components/ScenicDetails'
 import StoreDetails from '../components/StoreDetails'
 //后台
-import  ServerHome from '../components/ServerHome'
-import  Store from '../components/server/store/Store'
-import Menu from '../components/server/store/Menu'
-import Order from '../components/server/order/Order'
-import Scenic from '../components/server/scenic/Scenic'
-import Food from '../components/server/food/food'
+import ServerHome from '../components/ServerHome'
+import News from '../components/server/new/News.vue'
+import Fenlei from '../components/server/new/Fenlei.vue'
+import Saicheng from '../components/server/schedule/Saicheng.vue'
+import Video from '../components/server/scenic/video.vue'
+import Photo from '../components/server/scenic/photo.vue'
+import Info from '../components/server/user/Info.vue'
+import Pinglun from '../components/server/user/Pinglun.vue'
 
 
 Vue.use(Router)
@@ -93,34 +95,45 @@ export default new Router({
       path: '/ServerHome',
       name: 'ServerHome',
       component: ServerHome,
-      children:[
+      children: [
         {
-          path: 'server/store/Store',
-          name: 'Store',
-          component: Store
+          path: 'server/new/News',
+          name: 'News',
+          component: News
         },
         {
-          path: 'server/store/Menu',
-          name: 'Menu',
-          component: Menu
+          path: 'server/new/Fenlei',
+          name: 'Fenlei',
+          component: Fenlei
         },
         {
-          path:"server/order/Order",
-          name:'Order',
-          component:Order
+          path: "server/schedule/Saicheng",
+          name: 'Saicheng',
+          component: Saicheng
 
         },
         {
-          path:"server/scenic/Scenic",
-          name:'Scenic',
-          component:Scenic
-
+          path: "server/scenic/Video",
+          name: 'Video',
+          component: Video
         }
         ,
         {
-          path:"server/food/Food",
-          name:'Food',
-          component:Food
+          path: "server/scenic/Photo",
+          name: 'Photo',
+          component: Photo
+        }
+        ,
+        {
+          path: "server/user/Info",
+          name: 'Info',
+          component: Info
+        }
+        ,
+        {
+          path: "server/user/Pinglun",
+          name: 'Pinglun',
+          component: Pinglun
         }
 
       ]

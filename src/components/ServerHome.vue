@@ -9,7 +9,7 @@
       <!--主体-->
       <el-container>
         <!--左侧菜单-->
-        <el-side :width="isCollapse ? '64px' : '200px'">
+        <el-side :width="isCollapse ? '64px' : '300px'">
           <div class="toggle-button" @click="toggleCollapse">|||</div>
           <el-menu
             background-color="#313743"
@@ -26,19 +26,19 @@
             <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45-->
             <el-submenu :index="'1'">
               <template slot="title">
-                <i class="el-icon-location"></i>
-                <span>门店管理</span>
+                <i class="el-icon-document"></i>
+                <span>新闻管理</span>
               </template>
-              <el-menu-item index="/ServerHome/server/store/Store">
+              <el-menu-item index="/ServerHome/server/new/News">
                 <template slot="title">
                   <i class="el-icon-menu"></i>
-                  <span >管理店铺</span>
+                  <span >管理新闻</span>
                 </template>
               </el-menu-item>
-              <el-menu-item index="/ServerHome/server/store/menu">
+              <el-menu-item index="/ServerHome/server/new/Fenlei">
                 <template slot="title">
                   <i class="el-icon-menu"></i>
-                  <span >管理菜品</span>
+                  <span >管理分类</span>
                 </template>
               </el-menu-item>
             </el-submenu>
@@ -49,39 +49,51 @@
             <!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45-->
             <el-submenu :index="'2'">
               <template slot="title">
-                <i class="el-icon-location"></i>
-                <span>景区管理</span>
+                <i class="el-icon-picture"></i>
+                <span>多媒体管理</span>
               </template>
-              <el-menu-item index="/ServerHome/server/scenic/Scenic">
+              <el-menu-item index="/ServerHome/server/scenic/video">
                 <template slot="title">
                   <i class="el-icon-menu"></i>
-                  <span>景区列表</span>
+                  <span>管理视频</span>
+                </template>
+              </el-menu-item>
+              <el-menu-item index="/ServerHome/server/scenic/photo">
+                <template slot="title">
+                  <i class="el-icon-menu"></i>
+                  <span>管理图片</span>
                 </template>
               </el-menu-item>
             </el-submenu>
             <!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45-->
             <el-submenu :index="'3'">
               <template slot="title">
-                <i class="el-icon-location"></i>
-                <span>美食管理</span>
+                <i class="el-icon-user"></i>
+                <span>用户管理</span>
               </template>
-              <el-menu-item index="/ServerHome/server/food/Food">
+              <el-menu-item index="/ServerHome/server/user/Info">
                 <template slot="title">
                   <i class="el-icon-menu"></i>
-                  <span>美食列表</span>
+                  <span>信息管理</span>
+                </template>
+              </el-menu-item>
+              <el-menu-item index="/ServerHome/server/user/Pinglun">
+                <template slot="title">
+                  <i class="el-icon-menu"></i>
+                  <span>评论管理</span>
                 </template>
               </el-menu-item>
             </el-submenu>
             <!--&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
             <el-submenu :index="'4'">
               <template slot="title">
-                <i class="el-icon-location"></i>
-                <span>订单管理</span>
+                <i class="el-icon-edit-outline"></i>
+                <span>赛程管理</span>
               </template>
-                  <el-menu-item index="/ServerHome/server/order/Order">
+                  <el-menu-item index="/ServerHome/server/schedule/Saicheng">
                     <template slot="title">
                       <i class="el-icon-menu"></i>
-                      <span >订单列表</span>
+                      <span >赛程安排</span>
                     </template>
                   </el-menu-item>
             </el-submenu>

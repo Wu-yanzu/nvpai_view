@@ -4,9 +4,9 @@
         <div>
           <el-row :gutter="5" style="margin-left: 200px;">
             <el-col :span="4">
-              <el-input v-model="name" placeholder="请输入店铺名称">
-                <el-button type="primary" slot="append"  icon="el-icon-search" @click="fenye(1)" plain></el-button>
-              </el-input>
+<!--              <el-input v-model="name" placeholder="请输入店铺名称">-->
+<!--                <el-button type="primary" slot="append"  icon="el-icon-search" @click="fenye(1)" plain></el-button>-->
+<!--              </el-input>-->
             </el-col>
           </el-row>
         </div>

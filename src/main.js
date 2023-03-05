@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 
 import axios from 'axios'
-axios.defaults.baseURL = 'http://localhost:8080/';
+axios.defaults.baseURL = 'http://localhost:8081/';
 Vue.prototype.$axios = axios;
 import VueDirectiveImagePreviewer from 'vue-directive-image-previewer'
 import 'vue-directive-image-previewer/dist/assets/style.css'
